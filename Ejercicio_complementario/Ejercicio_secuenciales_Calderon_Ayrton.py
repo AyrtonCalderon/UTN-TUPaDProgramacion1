@@ -1,4 +1,4 @@
-#Calculadora de propinas en un restaurante
+#1_CALCULADORA DE PROPINAS EN UN RESTAURANTE
 
 #Pedir al usuario el monto total de la cuenta.
 total_mont=float(input("Ingrese el monto total: "))
@@ -20,3 +20,7 @@ print(f"Total a pagar al 10%: {total_pagar_10}")
 #Muestra por pantalla la propina sugerida y el total a pagar al 15%
 print(f"Propina sugerida al 15%: {propina_15}")
 print(f"Total a pagar al 15%: {total_pagar_15}")
+
+#2_Ejercicio2: Crea una variable llamada "numero1" y asígnale un número entero de tu elección.
+numero1=float(input("Ingrese un numero entero: "))
+
