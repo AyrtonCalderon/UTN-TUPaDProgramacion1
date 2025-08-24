@@ -79,8 +79,65 @@ print(f"El precio final con descuento es: {precio_final}")
 
 cadena="Soy ayrton calderon, tengo 28 años y vivo en Mendoza, Argentina"
 print(f"Se ha escrito: {cadena}")
+
 #----------------------------------------------------------------------------
 #Ejercicio 10: Sin borrar la variable "cadena", crea una nueva variable llamada "longitud". En ella, vas
 # a almacenar la longitud en caracteres de la cadena utilizando una de las funciones de Python.
 longitud=len(cadena)
 print(f"La longitud de la cadena es: {longitud}")
+
+#-------------------------------------------------------------------------------
+#Ejercicio 11:Crea otra vez la variable llamada "precio" y dale un valor decimal, el que sea y
+# conviértelo en número entero. Lo puedes hacer en la misma variable o en otra, da lo mismo.
+
+precio=float(3.5)
+precio_entero=int(precio)
+precio=print(precio_entero)
+
+#-------------------------------------------------------------------------------
+#Ejercicio 12: Crea dos variables. Una se va a llamar "nombre" y la segunda "apellido" concaténalas
+#en una tercera variable llamada "nombre_completo", el nombre y el apellido con un
+#espacio entre medio. Puedes usar libremente la forma de concatenación que quieras.
+nombre=input("Ingrese su nombre: ")
+apellido=input("Ingrese su apellido: ")
+nombre_completo=nombre+ " " + apellido
+print(f"Seria: {nombre_completo}")
+#-------------------------------------------------------------------------------
+
+#Ejercicio 13: Escribe tu edad en una variable. Increméntala en 5 y luego disminúyela en 10.
+edad=28
+edad=edad+5
+
+print("Despues de sumar 5",edad)
+
+edad=edad-10
+print("Despues de restas 10 años",edad)
+#-------------------------------------------------------------------------------
+
+#Ejercicio 14: Crea una variable llamada "altura" que contenga con decimales, tu altura en metros y
+#centímetros. Por ejemplo: 1.83. Multiplícala por 4 y luego divídela en 3
+altura=float(input("Ingrese su altura en decimales: "))
+print(f"La altura es de: {altura} metros")
+
+altura_mult=altura*4
+altura_div=altura_mult/3
+
+print(f"El resultado de multiplicar por 4 y dividir por 3 es de: {altura_div}")
+
+#-------------------------------------------------------------------------------
+#Ejercicio 15: Crea una variable que contenga tu nombre completamente en mayúsculas. Después
+#transfórmalo todo en minúsculas con algún método o función de Python.
+nombre_mayus="AYRTON CALDERON"
+print("Nombre en mayusculas:",nombre_mayus)
+
+nombre_minus=nombre_mayus.lower()
+print("Nombre en minuscula:",nombre_minus)
+
+#-------------------------------------------------------------------------------
+#Ejercicio 16:Por último, con la variable con el nombre en mayúsculas, aplica un método parecido
+#para que se transforme todo en minúsculas excepto la primera letra.
+
+nombre_modif=nombre_mayus.capitalize()
+
+print("Nombre modificado:",nombre_modif)
+
