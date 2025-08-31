@@ -123,7 +123,13 @@ print(f"Ingresos anuales: ${ingresos:,.2f}")
 print(f"Impuesto a pagar: ${impuesto:,.2f}")
 #-----------------------------------------------------------------------
 #-----------------------------------------------------------------------
-#Ejercicio_5: El sistema debe administrar retiros de dinero de un cajero.
+#Ejercicio_2: Se desea determinar el estado académico de un alumno en base a 3 notas parciales.
+
+# Códigos de colores ANSI
+rojo = "\033[91m"
+amarillo = "\033[93m"
+verde = "\033[92m"
+reset = "\033[0m"  # Para volver al color normal
 
 #Ingreso de datos
 nombre_usuario=input("Ingrese su nombre: ")
@@ -146,10 +152,55 @@ elif 6 <= promedio <8:
     print(f"{amarillo}Aprobado con final{reset}")
 elif promedio >=8:
     print(f"{verde}Promocionado{reset}")
+#----------------------------------------------------------
+#----------------------------------------------------------
+#Ejercicio_3: El sistema debe administrar retiros de dinero de un cajero.
+nombre=input("Ingrese su nombre: ")
 
-# Códigos de colores ANSI
-rojo = "\033[91m"
-amarillo = "\033[93m"
-verde = "\033[92m"
-reset = "\033[0m"  # Para volver al color normal
+#Ingreso de pin
+# PIN correcto
+PIN_CORRECTO = "1234"
+
+# Primer intento
+pin = input("Ingrese su PIN: ")
+
+if pin == PIN_CORRECTO:
+    print("PIN correcto. Acceso permitido.")
+else:
+    print("PIN incorrecto. Intento 1 de 3")
+    
+    # Segundo intento
+    pin = input("Ingrese su PIN nuevamente: ")
+    if pin == PIN_CORRECTO:
+        print("PIN correcto. Acceso permitido.")
+    else:
+        print("PIN incorrecto. Intento 2 de 3")
+        
+        # Tercer intento
+        pin = input("Ingrese su PIN nuevamente: ")
+        if pin == PIN_CORRECTO:
+            print("PIN correcto. Acceso permitido.")
+        else:
+            print("PIN incorrecto. Se alcanzó el máximo de intentos. Acceso bloqueado.")
+#SALDO INICIAL
+saldo_inicial = 50000
+
+monto = float(input("Ingrese el monto a retirar: "))
+
+if monto > 20000:
+    comision = monto * 0.02         # 2% de comisión
+    total = monto + comision        # monto + comisión
+    if total > saldo_inicial:
+        print("No tiene saldo suficiente para cubrir retiro + comisión.")
+    else:
+        saldo_inicial -= total
+        print(f"Retiro de ${monto:,.2f} realizado con comisión de ${comision:,.2f}.")
+else:
+    if monto > saldo_inicial:
+        print("No tiene saldo suficiente para cubrir el retiro.")
+    else:
+        saldo_inicial -= monto
+        print(f"Retiro de ${monto:,.2f} realizado correctamente.")
+
+print(f"Saldo actualizado: ${saldo_inicial:,.2f}")
 
