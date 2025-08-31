@@ -47,30 +47,30 @@ if auxDia_letra == False or auxDia_numero == False or auxMes_actual == False:
 if dia_letra == "lunes" or dia_letra == "martes" or dia_letra=="miercoles": 
 
     #pruebas
-    cant_aprobados = int(input("Ingrese la cantidad de aprobados"))
-    cant_desaprobados = int(input("Ingrese la cantidad de desaprobados"))
+    cant_aprobados = int(input("Ingrese la cantidad de aprobados: "))
+    cant_desaprobados = int(input("Ingrese la cantidad de desaprobados: "))
     cant_alumnos = cant_aprobados + cant_desaprobados
 
     promedio_aprobados = cant_aprobados*100/cant_alumnos
     promedio_desaprobados = cant_desaprobados*100/cant_alumnos
 
-    print(f"El promedio de alumnos desaprobados fue de {promedio_desaprobados}% y el promedio de alumnos aprobados fue de {promedio_aprobados} ")
+    print(f"El promedio de alumnos desaprobados fue de: {promedio_desaprobados}% y el promedio de alumnos aprobados fue de: {promedio_aprobados} ")
 
 
 elif dia_letra == "jueves":
     #practica hablada
-    asistencia = float(input("Ingrese el procentajes de asistencia"))
+    asistencia = float(input("Ingrese el procentajes de asistencia: "))
     if(asistencia > 50):
         print("Asistio a la mayoría de clase")
     else:
-        print("no asistió a la mayoría de clases")
+        print("No asistió a la mayoría de clases")
 #viernes
 
 else:
     #viernes
     if dia_numero == 1 and (mes_actual == 1 or mes_actual == 7):
         print("Comienzo de nuevo ciclo")
-        cant_alumnosCiclo= int(input("Ingrese la cantidad de alumnos del ciclo"))
-        arancel = float(input("Ingrese el arancel por alumno"))
+        cant_alumnosCiclo= int(input("Ingrese la cantidad de alumnos del ciclo: "))
+        arancel = float(input("Ingrese el arancel por alumno: "))
         recaudacion = arancel * cant_alumnosCiclo
         print(f"La recaudación de {recaudacion}$")
