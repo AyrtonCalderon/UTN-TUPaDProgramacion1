@@ -1,6 +1,6 @@
 #EJERCICIO_1
 #Ingreso de datos
-nombre=input("Ingrese su nombre: ")
+nombre = input("Ingrese su nombre: ")
 apellido=input("Ingrese su apellido: ")
 edad=int(input(f"Ingrese su edad: "))
 
@@ -11,7 +11,7 @@ if promedio <0 or promedio > 10:
     print(f"Error, el promedio debe estar entre 0 y 10")
 else:
     print(f"Promedio permitido: {promedio}")
-
+    
 #Promedio
 promedio=float(input("Ingrese su promedio general:(0 y 10): "))
 
@@ -67,9 +67,9 @@ nombre=input("Ingrese su nombre: ")
 apellido=input("Ingrese su apellido: ")
 cuit=int(input(f"Ingrese su CUIT: "))
 ingreso_men=float(input(f"Ingreso mensual: "))
-antiguedad_laboral=int(input("Ingrese su años de antiguedad"))
-historial_crediticio=input(f"Bueno/regular/malo").lower()
-dinero_ingresado=float(input("Ingrese la cantidad de dinero ingresado:" ))
+antiguedad_laboral=int(input("Ingrese su años de antiguedad: "))
+historial_crediticio=input(f"Bueno/regular/malo: ").lower()
+dinero_ingresado=float(input("Ingrese la cantidad de dinero ingresado: " ))
 #Condicion print("Credito aprobado")
 if historial_crediticio=="malo":
     print("Historial malo, rechazado")
@@ -91,3 +91,65 @@ print("CUIT:", cuit)
 print("Ingresos: $", ingreso_men)
 print("Antigüedad:", antiguedad_laboral, "años")
 print("Historial:", historial_crediticio)
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Ejercicios de Tarea — Programación 1 (Condicionales)
+
+#Ejercicio_4: Ejercicio 1 — Clasificación de impuestos
+#El programa debe calcular el impuesto anual que debe pagar una persona en función de sus ingresos y edad:
+nombre = input("Ingrese su nombre: ")
+apellido = input("Ingrese su apellido: ")
+edad = int(input("Ingrese su edad: "))
+ingresos = float(input("Ingrese su ingreso anual: "))
+
+# Cálculo del impuesto según ingresos
+if ingresos < 500000:
+    impuesto = 0
+elif ingresos < 2000000:
+    impuesto = ingresos * 0.10
+elif ingresos < 5000000:
+    impuesto = ingresos * 0.20
+else:
+    impuesto = ingresos * 0.35
+
+# Reducción por edad (>65 años)
+if edad > 65:
+    impuesto = impuesto / 2
+
+# Resultado
+print(f"Contribuyente: {nombre}, {apellido}")
+print(f"Edad: {edad} años")
+print(f"Ingresos anuales: ${ingresos:,.2f}")
+print(f"Impuesto a pagar: ${impuesto:,.2f}")
+#-----------------------------------------------------------------------
+#-----------------------------------------------------------------------
+#Ejercicio_5: El sistema debe administrar retiros de dinero de un cajero.
+
+#Ingreso de datos
+nombre_usuario=input("Ingrese su nombre: ")
+n_legajo=input("Ingrese numero de legajo: ")
+
+#Notas
+nota_1=float(input("Ingrese la nota 1: "))
+nota_2=float(input("Ingrese la nota 2: "))
+nota_3=float(input("Ingrese la nota 3: "))
+
+#Calculo de promedio
+promedio=(nota_1+nota_2+nota_3)/3
+print(f"El promedio es de: {promedio:,.2f}")
+#Condicion
+if nota_1<4 or nota_2<4 or nota_3 < 4:
+    print(f"{rojo},Desaprobado directo{reset}")
+elif promedio<6:
+    print(f"{rojo}Desaprobado{reset}")
+elif 6 <= promedio <8:
+    print(f"{amarillo}Aprobado con final{reset}")
+elif promedio >=8:
+    print(f"{verde}Promocionado{reset}")
+
+# Códigos de colores ANSI
+rojo = "\033[91m"
+amarillo = "\033[93m"
+verde = "\033[92m"
+reset = "\033[0m"  # Para volver al color normal
+
