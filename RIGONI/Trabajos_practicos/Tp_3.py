@@ -69,7 +69,7 @@ elif antiguedad>=30:
 
 contraseña=input("Ingrese una contraseña: ")
 
-if len(contraseña>8) and len(contraseña<14):
+if len(contraseña) >= 8 and len(contraseña) <= 14:
  print("La contraseña ingresada es correcta")
 else:
  print("Porfavor ingrese una contraseña")
@@ -84,7 +84,7 @@ import random
 #Lista de 50 numeros entre 1 y 100
 numeros_aleatorios=[random.randint(1,100) for i in range(50)]
 
-from stadistics import mode,median,mean
+from statistics import mode,median,mean
 mi_lista=[1,2,3,4,5]
 mean(mi_lista)
 
